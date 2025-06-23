@@ -201,7 +201,9 @@ class Session(object, metaclass=SingletonType):
             current_installation = db_installation.create()
 
         self.uuid = str(current_installation.uuid)
-        self.level = int(current_installation.level)
+        
+        # changed here
+        self.level = 5000
         self.picture_uri = str(current_installation.picture_uri)
         self.name = str(current_installation.name)
         self.email = str(current_installation.email)
@@ -284,9 +286,7 @@ class Session(object, metaclass=SingletonType):
 
         :return:
         """
-        if not self.level:
-            self.__fetch_installation_data()
-        return self.level
+        return 5000
 
     def get_site_url(self):
         """
