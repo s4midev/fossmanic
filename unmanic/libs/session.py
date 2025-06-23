@@ -203,7 +203,7 @@ class Session(object, metaclass=SingletonType):
         self.uuid = str(current_installation.uuid)
         
         # changed here
-        self.level = 5000
+        self.level = 2
         self.picture_uri = str(current_installation.picture_uri)
         self.name = str(current_installation.name)
         self.email = str(current_installation.email)
@@ -286,7 +286,7 @@ class Session(object, metaclass=SingletonType):
 
         :return:
         """
-        return 5000
+        return 2
 
     def get_site_url(self):
         """
